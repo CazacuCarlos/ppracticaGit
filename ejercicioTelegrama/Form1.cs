@@ -16,8 +16,10 @@ namespace ejercicioTelegrama
             //Leo el telegrama 
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (cbUrgente.Checked)
+            if (rbUrgente.Checked)
                 tipoTelegrama = 'u';
+            else if (rbOrdinario.Checked)
+                tipoTelegrama = 'o';
             //Obtengo el número de palabras que forma el telegrama 
             numPalabras = textoTelegrama.Length;
             //Si el telegrama es ordinario
@@ -36,6 +38,11 @@ namespace ejercicioTelegrama
                 else
                     coste = 0;
             txtPrecio.Text = coste.ToString() + " euros";
+        }
+
+        private void Ordinario(object sender, EventArgs e)
+        {
+
         }
     }
 }
