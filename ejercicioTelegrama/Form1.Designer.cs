@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtPrecio = new TextBox();
             label2 = new Label();
             button1 = new Button();
-            checkBox1 = new CheckBox();
-            textBox = new TextBox();
+            cbUrgente = new CheckBox();
+            txtTelegrama = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -45,12 +45,12 @@
             label1.TabIndex = 0;
             label1.Text = "Texto";
             // 
-            // textBox1
+            // txtPrecio
             // 
-            textBox1.Location = new Point(193, 353);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(257, 27);
-            textBox1.TabIndex = 1;
+            txtPrecio.Location = new Point(193, 353);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(257, 27);
+            txtPrecio.TabIndex = 1;
             // 
             // label2
             // 
@@ -69,35 +69,36 @@
             button1.TabIndex = 3;
             button1.Text = "Calcular";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // checkBox1
+            // cbUrgente
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(113, 286);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(91, 24);
-            checkBox1.TabIndex = 5;
-            checkBox1.Text = "Urgente?";
-            checkBox1.UseVisualStyleBackColor = true;
+            cbUrgente.AutoSize = true;
+            cbUrgente.Location = new Point(113, 286);
+            cbUrgente.Name = "cbUrgente";
+            cbUrgente.Size = new Size(91, 24);
+            cbUrgente.TabIndex = 5;
+            cbUrgente.Text = "Urgente?";
+            cbUrgente.UseVisualStyleBackColor = true;
             // 
-            // textBox
+            // txtTelegrama
             // 
-            textBox.Location = new Point(126, 79);
-            textBox.Multiline = true;
-            textBox.Name = "textBox";
-            textBox.Size = new Size(623, 174);
-            textBox.TabIndex = 6;
+            txtTelegrama.Location = new Point(126, 79);
+            txtTelegrama.Multiline = true;
+            txtTelegrama.Name = "txtTelegrama";
+            txtTelegrama.Size = new Size(623, 174);
+            txtTelegrama.TabIndex = 6;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox);
-            Controls.Add(checkBox1);
+            Controls.Add(txtTelegrama);
+            Controls.Add(cbUrgente);
             Controls.Add(button1);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txtPrecio);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
@@ -108,10 +109,10 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtPrecio;
         private Label label2;
         private Button button1;
-        private CheckBox checkBox1;
-        private TextBox textBox;
+        private CheckBox cbUrgente;
+        private TextBox txtTelegrama;
     }
 }
